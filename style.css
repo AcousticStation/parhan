@@ -93,6 +93,13 @@ padding: 10px 0;
 	display: none;
 }
 
+/* カテゴリー名のデザイン */
+.get-categories {
+	padding: 2px 5px;
+	margin-right: 10px;
+	background-color: #f3f3f3;
+}
+
 .pagination-next-link, .comment-btn {
 	background-color: #87cefa;
 	color: #fff;
