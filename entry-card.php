@@ -58,14 +58,14 @@ if (is_entry_card_type_big_card_first() && $count === 1) {
 
           <?php          
           $update_time = get_update_time(get_site_date_format()); //更新日の取得
-          //投稿日の表示
+          //投稿日の表示(fontawesomeを「カレンダー」に変更)
           if (is_entry_card_post_date_visible() || (is_entry_card_post_date_or_update_visible() && !$update_time && is_entry_card_post_update_visible())): ?>
-            <span class="post-date"><span class="fa fa-clock-o" aria-hidden="true"></span><span class="entry-date"><?php the_time(get_site_date_format()); ?></span></span>
+            <span class="post-date"><span class="fa-solid fa-calendar" aria-hidden="true"></span><span class="entry-date"><?php the_time(get_site_date_format()); ?></span></span>
           <?php endif ?>
           
-          <?php //更新時の表示
+          <?php //更新時の表示(fontawesomeを「ペン」に変更)
           if (is_entry_card_post_update_visible() && $update_time && (get_the_time('U') < get_update_time('U'))): ?>
-            <span class="post-update"><span class="fa fa-history" aria-hidden="true"></span><span class="entry-date"><?php echo $update_time; ?></span></span>
+            <span class="post-update"><span class="fa-solid fa-pen-fancy" aria-hidden="true"></span><span class="entry-date"><?php echo $update_time; ?></span></span>
           <?php endif ?>
         </div>
         <div class="entry-card-categorys e-card-categorys"><?php the_nolink_categories() ?></div>
